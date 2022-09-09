@@ -40,11 +40,8 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 
 ## ✒️ Autores
 
-* **Nathan Dias** - *Desenvolvimento do código* - [Nathan](https://github.com/nathanfdias)
-* **Rivania Gomes** - *Desenvolvimento do código* - [Rivania](https://github.com/RivaniaGomes)
-* **Raphaela Fagundes** - *Desenvolvimento do código* - [Raphaela](https://github.com/Raphaela-Fagundes)
-* **Leonardo** - *Desenvolvimento do código* - [Leonardo](https://github.com/unamon)
-* **Gabriel Pinheiro** - *Desenvolvimento do código* - [Gabriel](https://github.com/BilPinheiro)
+| [<img src="https://avatars.githubusercontent.com/u/110867246?v=4" width=115><br><sub>Gabriel Pinheiro</sub>](https://github.com/BilPinheiro) | [<img src="https://avatars.githubusercontent.com/u/69130377?v=4" width=115><br><sub>Leonardo</sub>](https://github.com/unamon) |  [<img src="https://avatars.githubusercontent.com/u/104539556?v=4" width=115><br><sub>Nathan Dias</sub>](https://github.com/nathanfdias) | [<img src="https://avatars.githubusercontent.com/u/97267492?s=400&u=dfa6d3d30423ac374c7ed9189e9a24808cdc39c6&v=4" width=115><br><sub>Raphaela Fagundes</sub>](https://github.com/Raphaela-Fagundes) |  [<img src="https://avatars.githubusercontent.com/u/106483714?v=4" width=115><br><sub>Rivania Gomes</sub>](https://github.com/RivaniaGomes) | 
+| :---: | :---: | :---: | :---: | :---: |
 --- 
  
 ## 🎁 Expressões de gratidão
