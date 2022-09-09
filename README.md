@@ -1,6 +1,6 @@
-## JavaPOO
+## Projeto JavaPOO
 
-Java Poo exercises and practice
+Java Poo project and practice
 
 ![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=EM%20PROGRESSO&color=GREEN&style=for-the-badge)
  
@@ -50,6 +50,6 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 ## 🎁 Expressões de gratidão
 
 * Conte a outras pessoas sobre este projeto 📢
-* Obrigado por ver esse projeto ❤️
+* Obrigado por vizualizar nosso projeto ❤️
 
 --- 
