@@ -1,4 +1,4 @@
-package br.org.serratec.empregados;
+package br.org.serratec.model;
 
 public abstract class Empregados {
     
