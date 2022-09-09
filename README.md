@@ -1,18 +1,55 @@
-## Getting Started
+## Projeto JavaPOO
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Java Poo project and practice
 
-## Folder Structure
+![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=EM%20PROGRESSO&color=GREEN&style=for-the-badge)
+ 
+ 
+--- 
 
-The workspace contains two folders by default, where:
+## 📋 Índice
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- [Sobre](#javapoo)
+- [Tecnologias utilizadas](#-tecnologias-utilizadas)
+- [Como executar o projeto](#-como-executar-o-projeto)
+- [Construído com](#%EF%B8%8F-construído-com)
+- [Autores](#%EF%B8%8F-autores)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+--- 
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 🚀 Tecnologias utilizadas
 
-## Dependency Management
+O projeto está desenvolvido utilizando as seguintes tecnologias:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Java
+
+--- 
+
+## ⌨ Como executar o projeto
+
+É necessário a utilização do Java Development KIT
+
+--- 
+
+## 🛠️ Construído com
+
+* [Visual Studio Code](https://code.visualstudio.com/) - ferramenta de desenvolvimento
+* [Spring Tools 4](https://spring.io/tools) - ferramenta de desenvolvimento
+* [JDK](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html) - Java Development KIT
+--- 
+
+## ✒️ Autores
+
+* **Nathan Dias** - *Desenvolvimento do código* - [Nathan](https://github.com/nathanfdias)
+* **Rivania Gomes** - *Desenvolvimento do código* - [Rivania](https://github.com/RivaniaGomes)
+* **Raphaela Fagundes** - *Desenvolvimento do código* - [Raphaela](https://github.com/Raphaela-Fagundes)
+* **Leonardo** - *Desenvolvimento do código* - [Leonardo](https://github.com/unamon)
+* **Gabriel Pinheiro** - *Desenvolvimento do código* - [Gabriel](https://github.com/BilPinheiro)
+--- 
+ 
+## 🎁 Expressões de gratidão
+
+* Conte a outras pessoas sobre este projeto 📢
+* Obrigado por vizualizar nosso projeto ❤️
+
+--- 
