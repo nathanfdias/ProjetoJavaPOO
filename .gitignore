@@ -3,9 +3,6 @@
 
 ### STS ###
 .metadata
-.settings/
-.classpath
-
 
 ### JAVA ###
 bin/
