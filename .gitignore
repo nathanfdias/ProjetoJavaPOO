@@ -1,8 +1,5 @@
 ### VS Code ###
 .vscode/
 
-### STS ###
-.metadata
-
 ### JAVA ###
 bin/

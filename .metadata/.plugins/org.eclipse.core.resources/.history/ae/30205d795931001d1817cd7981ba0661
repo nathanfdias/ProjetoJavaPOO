@@ -1,0 +1,5 @@
+package br.org.serratec.classes.exception;
+
+public class DependenteException {
+
+}
