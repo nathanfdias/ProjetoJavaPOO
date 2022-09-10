@@ -12,7 +12,8 @@ public class Dependente extends Pessoa{
 		super(nome, cpf, dataNascimento);
 		this.parentesco = parentesco;
 	}
-		public Parentesco getParentesco() {
+	
+	public Parentesco getParentesco() {
 		return parentesco;
 	}
 
