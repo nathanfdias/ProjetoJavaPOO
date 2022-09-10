@@ -1,10 +1,12 @@
 package br.org.serratec.abstracts;
 
-public abstract class Pessoa {
-	protected String nome, cpf, dataNascimento;
+import java.time.LocalDate;
 
-	protected Pessoa(String nome, String cpf, String dataNascimento) {
-		super();
+public abstract class Pessoa {
+	protected String nome, cpf;
+	protected LocalDate dataNascimento;
+
+	protected Pessoa(String nome, String cpf,LocalDate dataNascimento) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
@@ -26,11 +28,11 @@ public abstract class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public String getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	

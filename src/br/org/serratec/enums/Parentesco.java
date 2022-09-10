@@ -5,14 +5,14 @@ public enum Parentesco {
 	SOBRINHO('S'),
 	OUTROS('O');
 	
-	private char valor;
+	private char valorParantesco;
 
-	private Parentesco(char valor) {
-		this.valor = valor;
+	private Parentesco(char valorParantesco) {
+		this.valorParantesco = valorParantesco;
 	}
 	
-	private char getValor() {
-		return this.valor;
+	public char getValorParantesco() {
+		return this.valorParantesco;
 	}
 	
 }
