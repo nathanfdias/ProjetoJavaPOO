@@ -6,6 +6,8 @@ import br.org.serratec.interfaces.IFuncionário;
 
 public class Funcionario extends Pessoa implements IFuncionário{
 	protected Double salarioBruto;
+	protected Double descontoINSS;
+	protected Double descontoIR;
 	public Dependente[] dependentes;
 
 	public Funcionario(String nome, String cpf, LocalDate dataNascimento, Double salarioBruto,
@@ -14,20 +16,49 @@ public class Funcionario extends Pessoa implements IFuncionário{
 		this.salarioBruto = salarioBruto;
 		this.dependentes = dependentes;
 	}	
-	
+
+	public Double getDescontoINSS() {
+		return descontoINSS;
+	}
+
+	public Double getDescontoIR() {
+		return descontoIR;
+	}
+
 	public Double getSalarioBruto() {
 		return salarioBruto;
 	}
 
 	@Override
-	public Double descontoINSS() {
-		return null;
+	public Double calculoINSS() {
+		/*if (salarioBruto <= 1212.00) {
+            return descontoINSS = salarioBruto * 0.075;
+        } else if (salarioBruto <= 2427.35) {
+            return descontoINSS = salarioBruto * 0.09 - 18.18;
+        } else if (salarioBruto <= 3641.03) {
+        	return descontoINSS = salarioBruto * 0.12 - 91;
+        } else if (salarioBruto <= 7087.22) {
+        	return descontoINSS = salarioBruto * 0.14 - 163.82;
+        } else if (salarioBruto > 7087.22) {
+            return descontoINSS = salarioBruto * 0.14 - 163.82;
+        }*/
+		return descontoINSS;
 	}
 
 	@Override
-	public Double descontoIR() {
-		return null;
+	public Double calculoIR() {//Possível Cálculo
+		/*double baseCalculo = (salarioBruto - descontoINSS - "Valor Dependentes desconto");
+		if (baseCalculo <= 1903.98) {
+			descontoIR = 0.0;
+		} else if (baseCalculo  <= 2826.65) {
+			descontoIR = (baseCalculo * 0.075) - 142.8;
+		} else if (baseCalculo  <= 3751.05) {
+			descontoIR = (baseCalculo * 0.15) - 354.8;
+		} else if (baseCalculo  <= 4664.68) {
+			descontoIR = (baseCalculo * 0.225) - 636.13;
+		} else if (baseCalculo > 4664.68) {
+			descontoIR = (baseCalculo * 0.275) - 869.36;
+		} */
+		return descontoIR;
 	}
-	
-	
 }
