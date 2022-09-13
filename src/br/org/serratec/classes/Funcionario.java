@@ -3,6 +3,7 @@ package br.org.serratec.classes;
 import java.time.LocalDate;
 
 import br.org.serratec.abstracts.Pessoa;
+import br.org.serratec.exception.UniqueCPFException;
 import br.org.serratec.interfaces.IFuncionario;
 
 public class Funcionario extends Pessoa implements IFuncionario{
@@ -12,7 +13,7 @@ public class Funcionario extends Pessoa implements IFuncionario{
 	public Dependente[] dependentes;
 
 	public Funcionario(String nome, String cpf, LocalDate dataNascimento, Double salarioBruto,
-			Dependente[] dependentes) {
+			Dependente[] dependentes) throws UniqueCPFException {
 		super(nome, cpf, dataNascimento);
 		this.salarioBruto = salarioBruto;
 		this.dependentes = dependentes;
