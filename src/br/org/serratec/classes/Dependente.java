@@ -8,9 +8,20 @@ import br.org.serratec.enums.Parentesco;
 public class Dependente extends Pessoa{
 	private Parentesco parentesco;
 
-	public Dependente(String nome, String cpf, LocalDate dataNascimento, Parentesco parentesco) {
+	public Dependente(String nome, String cpf, LocalDate dataNascimento, String parentesco) {
 		super(nome, cpf, dataNascimento);
-		this.parentesco = parentesco;
+		switch (parentesco) {
+		case "FILHO":
+			this.parentesco = Parentesco.FILHO;
+			break;
+		case "SOBRINHO":
+			this.parentesco = Parentesco.SOBRINHO;
+			break;
+		case "OUTROS":
+			this.parentesco = Parentesco.OUTROS;
+		default:
+			break;
+		}
 	}
 	
 	public Parentesco getParentesco() {
