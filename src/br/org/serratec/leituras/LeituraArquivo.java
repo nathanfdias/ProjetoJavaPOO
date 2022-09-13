@@ -8,10 +8,11 @@ import java.util.Set;
 
 import br.org.serratec.classes.Dependente;
 import br.org.serratec.classes.Funcionario;
+import br.org.serratec.exception.UniqueCPFException;
 
 public class LeituraArquivo {
 
-    public Set<Funcionario> verificaArquivo(String caminhoArquivo) {
+    public Set<Funcionario> verificaArquivo(String caminhoArquivo) throws UniqueCPFException {
 
         Set<Funcionario> funcionario = new HashSet<>();
         Set<Dependente> dependente = new HashSet<>();
@@ -36,18 +37,15 @@ public class LeituraArquivo {
                 funcionario.add(new Funcionario(vetorFuncionario[0], vetorFuncionario[1], vetorFuncionario[2],
                         vetorFuncionario[3], dependente));
                 dependente = new HashSet<>();
-                sc.close();
             }
+            sc.close();
             return funcionario;
+            
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return funcionario;
         }
-    }
-
-    public void gravaFuncionario(Scanner sc) {
-
     }
 
 }

@@ -1,6 +1,6 @@
 package br.org.serratec.classes;
 
-import java.time.LocalDate;
+import java.util.Set;
 
 import br.org.serratec.abstracts.Pessoa;
 import br.org.serratec.exception.UniqueCPFException;
@@ -10,12 +10,12 @@ public class Funcionario extends Pessoa implements IFuncionario{
 	protected Double salarioBruto;
 	protected Double descontoINSS;
 	protected Double descontoIR;
-	public Dependente[] dependentes;
+	public Set<Dependente> dependentes;
 
-	public Funcionario(String nome, String cpf, LocalDate dataNascimento, Double salarioBruto,
-			Dependente[] dependentes) throws UniqueCPFException {
+	public Funcionario(String nome, String cpf, String dataNascimento, String salarioBruto,
+			Set<Dependente> dependentes) throws UniqueCPFException {
 		super(nome, cpf, dataNascimento);
-		this.salarioBruto = salarioBruto;
+		this.salarioBruto = Double.parseDouble(salarioBruto);
 		this.dependentes = dependentes;
 	}	
 

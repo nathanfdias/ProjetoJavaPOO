@@ -9,7 +9,7 @@ import br.org.serratec.exception.UniqueCPFException;
 public class Dependente extends Pessoa{
 	private Parentesco parentesco;
 
-	public Dependente(String nome, String cpf, LocalDate dataNascimento, String parentesco) throws UniqueCPFException {
+	public Dependente(String nome, String cpf, String dataNascimento, String parentesco) throws UniqueCPFException {
 		super(nome, cpf, dataNascimento);
 		switch (parentesco) {
 		case "FILHO":
