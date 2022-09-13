@@ -1,15 +1,27 @@
 package br.org.serratec.abstracts;
 
 import java.time.LocalDate;
+import java.util.Set;
+
+import br.org.serratec.exception.UniqueCPFException;
 
 public abstract class Pessoa {
 	protected String nome, cpf;
 	protected LocalDate dataNascimento;
-
-	protected Pessoa(String nome, String cpf,LocalDate dataNascimento) {
+	private static Set<String> cpfs;
+	
+	
+	protected Pessoa(String nome, String cpf,LocalDate dataNascimento) throws UniqueCPFException {
 		this.nome = nome;
-		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
+		
+		if (cpfs.contains(cpf)) {
+			throw new UniqueCPFException("Esse CPF já existe!");
+		} else {
+			this.cpf = cpf;
+			cpfs.add(cpf);
+		}
+		
 	}
 
 	public String getNome() {
