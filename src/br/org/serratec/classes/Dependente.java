@@ -1,15 +1,12 @@
 package br.org.serratec.classes;
 
-import java.time.LocalDate;
-
 import br.org.serratec.abstracts.Pessoa;
 import br.org.serratec.enums.Parentesco;
-import br.org.serratec.exception.UniqueCPFException;
 
-public class Dependente extends Pessoa{
+public class Dependente extends Pessoa {
 	private Parentesco parentesco;
 
-	public Dependente(String nome, String cpf, String dataNascimento, String parentesco) throws UniqueCPFException {
+	public Dependente(String nome, String cpf, String dataNascimento, String parentesco) /*throws UniqueCPFException*/ {
 		super(nome, cpf, dataNascimento);
 		switch (parentesco) {
 		case "FILHO":
@@ -24,10 +21,14 @@ public class Dependente extends Pessoa{
 			break;
 		}
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Dependente [nome=" + nome + "]";
+	}
+
 	public Parentesco getParentesco() {
 		return parentesco;
 	}
 
-	
 }

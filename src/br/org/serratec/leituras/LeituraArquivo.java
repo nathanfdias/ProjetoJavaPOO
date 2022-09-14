@@ -12,7 +12,7 @@ import br.org.serratec.exception.UniqueCPFException;
 
 public class LeituraArquivo {
 
-    public Set<Funcionario> verificaArquivo(String caminhoArquivo) throws UniqueCPFException {
+    public Set<Funcionario> verificaArquivo(String caminhoArquivo) /*throws UniqueCPFException*/ {
 
         Set<Funcionario> funcionario = new HashSet<>();
         Set<Dependente> dependente = new HashSet<>();
@@ -39,6 +39,11 @@ public class LeituraArquivo {
                 dependente = new HashSet<>();
             }
             sc.close();
+            
+//            for (Funcionario funcionario2 : funcionario) {
+//                System.out.println(funcionario2);
+//            }
+//            
             return funcionario;
             
 
