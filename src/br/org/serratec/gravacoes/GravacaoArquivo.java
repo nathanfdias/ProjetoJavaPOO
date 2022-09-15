@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
+import java.util.Scanner;
 //import java.util.Set;
 import java.util.Set;
 
@@ -16,16 +17,22 @@ public class GravacaoArquivo {
 		
 		DecimalFormat form = new DecimalFormat("0.00");
 		
+		
+		//C:/Users/anikk/aula_po/ProjetoJavaPOO/FolhaDePagamento.csv
+		
         try {
-            FileWriter arquivoGravar = new FileWriter("C:/Users/anikk/aula_po/ProjetoJavaPOO/FolhaDePagamento.csv");
+        	Scanner sc = new Scanner(System.in);
+    		String arquivoFinal = sc.next();
+            FileWriter arquivoGravar = new FileWriter(arquivoFinal);
             PrintWriter gravacaoArquivo = new PrintWriter(arquivoGravar);
-            for (Funcionario funcionarioss : funcionario) {
-                String linha = funcionarioss.getNome() + ";" + funcionarioss.getCpf() + ";" +
-                form.format(funcionarioss.getDescontoINSS()) + ";" + form.format(funcionarioss.getDescontoIR()) + ";" + form.format(funcionarioss.getSalarioLiquido()) + "\n";
+            for (Funcionario funcionarios : funcionario) {
+                String linha = funcionarios.getNome() + ";" + funcionarios.getCpf() + ";" +
+                form.format(funcionarios.getDescontoINSS()) + ";" + form.format(funcionarios.getDescontoIR()) + ";" + form.format(funcionarios.getSalarioLiquido()) + "\n";
                 gravacaoArquivo.print(linha);
             }
             System.out.println("Arquivo gravado com sucesso!");
             gravacaoArquivo.close();
+            sc.close();
 
         } catch (IOException e) {
             System.out.println("Gravação não gerada");
