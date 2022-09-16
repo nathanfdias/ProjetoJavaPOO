@@ -2,18 +2,21 @@ package br.org.serratec.abstracts;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Objects;
-
-import br.org.serratec.exception.UniqueCPFException;
 
 public abstract class Pessoa {
 	protected String nome, cpf;
 	protected LocalDate dataNascimento;
 
-	protected Pessoa(String nome, String cpf, String dataNascimento) throws UniqueCPFException {
+	protected Pessoa(String nome, String cpf, String dataNascimento) {
 		this.nome = nome;
 		this.cpf = cpf;
-		this.dataNascimento = LocalDate.parse(dataNascimento, DateTimeFormatter.BASIC_ISO_DATE);
+		try {
+			this.dataNascimento = LocalDate.parse(dataNascimento, DateTimeFormatter.BASIC_ISO_DATE);
+		} catch (DateTimeParseException e) {
+			System.out.println("A data de nascimento da pessoa " + nome + " está em formato inválido!");
+		}
 	}
 
 	public String getNome() {
@@ -46,7 +49,7 @@ public abstract class Pessoa {
 	}
 
 	@Override
-	public boolean equals(Object obj){
+	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -56,5 +59,5 @@ public abstract class Pessoa {
 		Pessoa other = (Pessoa) obj;
 		return Objects.equals(cpf, other.cpf);
 	}
-	
+
 }

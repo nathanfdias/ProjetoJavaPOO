@@ -5,7 +5,7 @@ import java.time.Period;
 import java.util.Set;
 
 import br.org.serratec.abstracts.Pessoa;
-import br.org.serratec.exception.UniqueCPFException;
+import br.org.serratec.exception.DependenteException;
 import br.org.serratec.interfaces.CalculoImposto;
 
 public class Funcionario extends Pessoa implements CalculoImposto {
@@ -16,8 +16,8 @@ public class Funcionario extends Pessoa implements CalculoImposto {
 	protected Double valorDependencia = 0.0;
 	protected Double salarioLiquido;
 
-	public Funcionario(String nome, String cpf, String dataNascimento, String salarioBruto, Set<Dependente> dependentes)
-			throws UniqueCPFException {
+	public Funcionario(String nome, String cpf, String dataNascimento, String salarioBruto,
+			Set<Dependente> dependentes) {
 		super(nome, cpf, dataNascimento);
 		this.salarioBruto = Double.parseDouble(salarioBruto);
 		this.dependentes = dependentes;
@@ -66,13 +66,15 @@ public class Funcionario extends Pessoa implements CalculoImposto {
 	}
 
 	@Override
-	public Double validacaoDependente() {
+	public Double validacaoDependente() throws DependenteException {
 		for (Dependente dependente : dependentes) {
 			LocalDate dataNascimento = dependente.getDataNascimento();
 			LocalDate dataAtual = LocalDate.now();
 			Period period = Period.between(dataNascimento, dataAtual);
 			if (period.getYears() < 18) {
 				this.valorDependencia += 189.59;
+			} else {
+				throw new DependenteException("A idade do dependente " + dependente.getNome() + " é maior que 18 anos");
 			}
 		}
 		return this.valorDependencia;
