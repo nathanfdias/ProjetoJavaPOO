@@ -1,13 +1,10 @@
 package br.org.serratec.gravacoes;
 
-//import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
-//import java.util.Set;
 import java.util.Set;
-
 import javax.swing.JOptionPane;
 
 import br.org.serratec.classes.Funcionario;

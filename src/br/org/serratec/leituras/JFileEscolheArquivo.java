@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 
 public class JFileEscolheArquivo extends JFrame {
 
+	private static final long serialVersionUID = -6253163076412770271L;
+
 	public String JFileEscolherArquivo() {
 		return EscolheArquivo();
 	}

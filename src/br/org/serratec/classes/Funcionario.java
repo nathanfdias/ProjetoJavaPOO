@@ -5,6 +5,7 @@ import java.time.Period;
 import java.util.Set;
 
 import br.org.serratec.abstracts.Pessoa;
+import br.org.serratec.exception.UniqueCPFException;
 import br.org.serratec.interfaces.CalculoImposto;
 
 public class Funcionario extends Pessoa implements CalculoImposto {
@@ -16,7 +17,7 @@ public class Funcionario extends Pessoa implements CalculoImposto {
 	protected Double salarioLiquido;
 
 	public Funcionario(String nome, String cpf, String dataNascimento, String salarioBruto, Set<Dependente> dependentes)
-			/*throws UniqueCPFException*/ {
+			throws UniqueCPFException {
 		super(nome, cpf, dataNascimento);
 		this.salarioBruto = Double.parseDouble(salarioBruto);
 		this.dependentes = dependentes;
@@ -57,7 +58,7 @@ public class Funcionario extends Pessoa implements CalculoImposto {
 			return descontoINSS = salarioBruto * 0.09 - 18.18;
 		} else if (salarioBruto <= 3641.03) {
 			return descontoINSS = salarioBruto * 0.12 - 91;
-		} else if (salarioBruto < 7087.22){
+		} else if (salarioBruto < 7087.22) {
 			return descontoINSS = salarioBruto * 0.14 - 163.82;
 		} else {
 			return descontoINSS = 7087.22 * 0.14 - 163.82;
@@ -67,7 +68,6 @@ public class Funcionario extends Pessoa implements CalculoImposto {
 	@Override
 	public Double validacaoDependente() {
 		for (Dependente dependente : dependentes) {
-			//dependente.getDataNascimento();
 			LocalDate dataNascimento = dependente.getDataNascimento();
 			LocalDate dataAtual = LocalDate.now();
 			Period period = Period.between(dataNascimento, dataAtual);
@@ -96,7 +96,7 @@ public class Funcionario extends Pessoa implements CalculoImposto {
 
 		return descontoIR;
 	}
-	
+
 	@Override
 	public Double calculoSalarioLiquido() {
 		salarioLiquido = (salarioBruto - descontoINSS) - descontoIR;
